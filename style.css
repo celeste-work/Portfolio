@@ -1,0 +1,399 @@
+/* cursor */
+.particle {
+  position: absolute;
+  width: 0.50rem;
+  height: 0.50rem;
+  background-color: rgb(53, 126, 67);
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 10px rgb(70, 167, 88);
+  animation: fadeOut 0.8s forwards;
+}
+  
+  @keyframes fadeOut {
+  to {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+}
+
+body{
+  background: #1A202C;
+  background-color: #1f201d;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+}
+
+header {
+  container-type: scroll-state;
+  position: sticky;
+  top: 0px;
+
+  > nav {
+    transition: background .3s, color .3s;
+
+    @container scroll-state(stuck: top){
+      background: #3333337a;
+      color: #fff;
+    }
+  }
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1020; 
+}
+
+h2 ,p , .card-title{
+  color: white;
+}
+
+main{
+  padding: 1%;
+  margin: 15%;
+  margin-top: 1%;
+}
+
+.img-fotoperfil{
+  width: 16%;
+  display: flex;
+  margin: auto;
+}
+
+h1{
+  text-align: center;
+  font-size: 3.75rem;
+  margin: 1.25rem;
+  background: linear-gradient( to bottom, #9be253, #9be253, #427e07); 
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+span{
+  font-weight: 600;
+  background: linear-gradient( to bottom, #9be253, #9be253, #427e07);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+h2{
+  text-align: center;
+  font-size: 1.88rem;
+  margin: 1.88rem;
+}
+
+.descripcion, .margin-enlaces{
+  margin-left: 11%;
+  margin-right: 11%;
+}
+
+.diseño-enlaces{
+  width: 15%;
+  border-left: 0.06rem solid rgba(78, 76, 76, 0.575);
+  font-size: 0.94rem;
+}
+
+.enlaces:hover{
+  transform: scale(1.1);
+}
+
+.boton-cv, .boton-linkedin, .boton-github{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.31rem;
+  background: linear-gradient( to bottom, #9be253, #9be253, #427e07);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.boton-cv{
+  padding-left: 14%;
+}
+
+.section-logos{
+  padding: 0.94rem;
+  margin: 0.94rem;
+  overflow: hidden;
+}
+
+.slider .slide-track{
+  animation: scroll 20s linear infinite;
+  -webkit-animation: scroll 20s linear infinite;
+  width: calc(6.25rem * 21);
+}
+
+.slider .slide{
+  width: 6.25rem;
+  padding: 0.50rem;
+  margin: 0.50rem;
+}
+
+.slider .slide img{
+  width: 100%;
+}
+
+@keyframes scroll {
+  0%{
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100%{
+    -webkit-transform: translateX(calc(-6.25rem * 7));
+    transform: translateX(calc(-6.25rem * 7));
+  }
+}
+
+.logos:hover{
+  transform: scale(1.30);
+}
+
+.a-logos .tooltip {
+  visibility: hidden;
+  width: 7.50rem; 
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 0.31rem;
+  border-radius: 0.38rem;
+  position: absolute;
+  bottom: 110%; 
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+ .a-logos .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -0.31rem;
+  border-width: 0.31rem;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+.a-logos:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.a-logos{
+  display: flex;
+  justify-content: center;
+  position: relative
+}
+
+.section-proyectos{
+  margin: 1.25rem;
+  padding: 0.44rem;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, 50%);
+  gap: 0.63rem;
+}
+
+.letra-mediapila{
+  color: rgb(245, 140, 54);
+}
+
+.letra-alura{
+  color: rgb(15, 154, 247);
+}
+
+.card{
+  --bs-card-bg: none;
+  --bs-card-border-color: #2a572a71;
+}
+
+.btn{
+
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+  background-color: #46a758;
+  border-color: black;
+}
+
+.btn:hover{
+  border-color: black;
+  background-color: #357e43;
+  color: black;
+}
+
+/* RESPONSIVE */
+@media (max-width: 400px){
+
+  main{
+    margin: 8px;
+    margin-top: 10px;
+  }
+
+  h1{ 
+    font-size: 23px; 
+  }
+
+  h2{
+    font-size: 18px;
+  }
+
+  .img-fotoperfil{
+    width: 100px;
+    margin: auto;
+  }
+
+  .descripcion{
+    font-size: 0.90rem;
+  }
+
+  .descripcion, .margin-enlaces{
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+
+  .diseño-enlaces{
+    width: 100px;
+    font-size: 13px;
+  }
+
+  .slider .slide {
+    width: 50px;
+}
+
+  .a-logos{
+    width: 45px;
+  }
+
+  .section-proyectos{
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: none;
+    height: 900px;
+    margin: auto;
+    padding: 17px;
+  }
+
+  .card{
+    margin: 8px;
+  }
+
+}
+
+@media (min-width: 400px) and (max-width: 700px) {
+
+  main{
+    margin: 20px;
+    margin-top: 10px;
+  }
+
+  .img-fotoperfil{
+    width: 120px;
+    margin: auto;
+  }
+
+  h1{
+    font-size: 1.90rem;
+  }
+
+  h2{
+    font-size: 1.30rem;
+  }
+
+  .descripcion{
+    font-size: 0.95rem;
+  }
+
+  .diseño-enlaces{
+    width: 100px;
+    font-size: 14px;
+    margin: 0 0 30px 0;
+  }
+
+  .a-logos{
+    width: 45px;
+  }
+
+  .section-logos{
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+  }
+
+  .section-proyectos{
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: none;
+    height: 900px;
+    margin: auto;
+    padding: 18px;
+  }
+
+  .card{
+    margin: 10px;
+  }
+
+  .navbar-toggler, .navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.027);
+    border-color: rgba(255, 255, 255, 0.048) !important;
+  }
+
+  .navbar-toggler:focus{
+    box-shadow: none;
+  }
+
+}
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  main{
+    margin: 25px;
+    margin-top: 10px;
+  }
+
+  .img-fotoperfil{
+    width: 125px;
+  }
+
+  h1{
+    font-size: 45px;
+  }
+
+  h2{
+    font-size: 30px;
+  }
+
+  .descripcion{
+    font-size: 1.1rem;
+  }
+
+  .descripcion, .margin-enlaces{
+    margin-left: 11%;
+    margin-right: 11%;
+  }
+
+  .diseño-enlaces{
+    width: 100px;
+    font-size: 14px;
+    margin: 0 0 30px 0;
+  }
+
+  .section-logos{
+    margin-left: 1.8rem;
+    margin-right: 1.4rem;
+  }
+
+  .a-logos{
+    width: 60px;
+  }
+
+  .card{
+    margin: 5px;
+  }
+
+}
